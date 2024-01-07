@@ -201,8 +201,19 @@
         background: var(--container-color);
         padding: 8px 14px;
         border: 1px soid hsl(200 100% 99% / 5%);
+        margin-bottom: 2rem;
     }
     .heading-title{
         font-size:1.2rem;
         font-weight: 500;
+    }
+    /* copyright */
+    .copyright {
+      text-align: center;
+      padding:20px;
+    }
+    /* movie-content */
+    .movie-content{
+      display: grid;
+      grid-template-columns: 593px 593px 593px;
     }
