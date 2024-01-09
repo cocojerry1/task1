@@ -4,16 +4,17 @@ function getMovieData() {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: 'api키값을 넣으세요'
-    fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
-        .then(response => response.json())
-        .then(data => { allMovies = data.results; // 전체 영화 데이터 저장
-                            updateDOM(allMovies); // 초기에 모든 영화 표시
-        })
-        .catch(err => console.error(err));
+            Authorization: '키을 넣어주세요'
+    };
     
-        
+    fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
+    .then(response => response.json())
+    .then(data => { allMovies = data.results; // Store the fetched movies
+        updateDOM(allMovies); // Update the DOM with all movies initially
+    })
+    .catch(err => console.error(err));
 }
+
 // 무비컨텐트의 내용
 function updateDOM(movies) {
     const section = document.querySelector('.movie-content');
